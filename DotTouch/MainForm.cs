@@ -18,7 +18,7 @@ namespace DotTouch
 
         private void panel1_DragEnter(object sender, DragEventArgs e)
         {
-
+            e.Effect = DragDropEffects.Copy;
         }
 
         private void Apply_Click(object sender, EventArgs e)
@@ -27,6 +27,7 @@ namespace DotTouch
 
         private void panel1_DragOver(object sender, DragEventArgs e)
         {
+            //Cursor.Current = Cursors.Hand;
             object obj = e.Data.GetData(DataFormats.FileDrop);
             if (obj != null)
             {
